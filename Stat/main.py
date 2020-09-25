@@ -36,7 +36,7 @@ row = sheet.row_values(3)  # Grab a specific row
 
 number_regex = r'^-?\d+\.?\d*$'
 
-# python3.8+?
+# python3.8+
 
 
 
