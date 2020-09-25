@@ -1,4 +1,4 @@
-``` from scipy.stats import kstest
+from scipy.stats import kstest
 import numpy as np
 import gspread
 from oauth2client.service_account import  ServiceAccountCredentials
@@ -51,4 +51,4 @@ cell = sheet.cell(1,2).value  # Grab the value of a specific cell
 cdf, values = estimate_cdf(col, bins=len(col))
 teststat = kstest(values, cdf)
 
-```
+
