@@ -4,7 +4,7 @@ import gspread
 from oauth2client.service_account import  ServiceAccountCredentials
 import re
 
-
+np.seterr(divide='ignore', invalid='ignore')
 def estimate_cdf (col,bins=10,):
     print (col)
     # 'col'
@@ -15,7 +15,8 @@ def estimate_cdf (col,bins=10,):
 
 
 
-    return csum/csum[-1], edges
+    return csum/csum[-1], edges     
+    print (csum)
 
 # link to spreadsheet https://docs.google.com/spreadsheets/d/1_9wfZPiP8cZRZ4FFtAPNcuiygB6oBFthqah5fZS9XMQ/edit?usp=sharing
 
@@ -36,7 +37,7 @@ row = sheet.row_values(3)  # Grab a specific row
 
 number_regex = r'^-?\d+\.?\d*$'
 
-# python3.8+
+
 
 
 
@@ -48,7 +49,10 @@ print(col)
 
 cell = sheet.cell(1,2).value  # Grab the value of a specific cell
 
-cdf, values = estimate_cdf(col, bins=len(col))
-teststat = kstest(values, cdf)
+breakpoint()
+#cdf, values = estimate_cdf(col, bins=len(col))
+
+teststat = stats.kstest(values, cdf)
 
 
+                                                          
