@@ -1,8 +1,9 @@
-from scipy.stats import kstest
+from scipy import stats
 import numpy as np
 import gspread
 from oauth2client.service_account import  ServiceAccountCredentials
 import re
+
 
 np.seterr(divide='ignore', invalid='ignore')
 def estimate_cdf (col,bins=10,):
@@ -15,7 +16,7 @@ def estimate_cdf (col,bins=10,):
 
 
 
-    return csum/csum[-1], edges     
+    return csum/csum[-1], edges
     print (csum)
 
 # link to spreadsheet https://docs.google.com/spreadsheets/d/1_9wfZPiP8cZRZ4FFtAPNcuiygB6oBFthqah5fZS9XMQ/edit?usp=sharing
@@ -42,17 +43,40 @@ number_regex = r'^-?\d+\.?\d*$'
 
 
 col = sheet.col_values(3)  # Get a specific column print (col)
-dolphin= estimate_cdf(adjusted := [float(i) for i in col if re.match(i, number_regex)], len(adjusted))
+
+col2= sheet.col_values(7)
+floatdigits= estimate_cdf(adjusted := [float(i) for i in col if re.match(i, number_regex)], len(adjusted))
+
+
 
 print(col)
+print(col2)
 
 
-cell = sheet.cell(1,2).value  # Grab the value of a specific cell
-
-breakpoint()
-#cdf, values = estimate_cdf(col, bins=len(col))
-
-teststat = stats.kstest(values, cdf)
 
 
-                                                          
+shtest =stats.shapiro(col)
+print(shtest)
+
+
+
+
+#thelight= sheet.update_cell(5,6,col)
+#print(thelight)
+
+k2test =stats.ks_2samp(col, lol, alternative='two-sided', mode='auto')
+print(k2test)
+
+
+
+
+
+#mine = [1,2,3,4] sheet.update_cell(5,6, mine)
+
+
+
+
+# https://medium.com/analytics-vidhya/how-to-read-and-write-data-to-google-spreadsheet-using-python-ebf54d51a72c
+
+
+
