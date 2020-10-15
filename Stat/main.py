@@ -61,8 +61,6 @@ print(shtest)
 
 
 
-#thelight= sheet.update_cell(5,6,col)
-#print(thelight)
 
 k2test =stats.ks_2samp(col, lol, alternative='two-sided', mode='auto')
 print(k2test)
@@ -70,13 +68,6 @@ print(k2test)
 
 
 
-
-#mine = [1,2,3,4] sheet.update_cell(5,6, mine)
-
-
-
-
-# https://medium.com/analytics-vidhya/how-to-read-and-write-data-to-google-spreadsheet-using-python-ebf54d51a72c
 
 
 
