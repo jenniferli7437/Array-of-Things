@@ -1,0 +1,127 @@
+ *{
+     margin: 0;
+     padding: 0;
+     font-family: sans-serif;
+     list-style-type: none;
+ }
+
+body {
+    background: rgb(105, 101, 101);
+}
+
+.container{
+     width: 100%;
+     margin: 0 auto;
+ }
+
+header{
+    background: rgb(56, 54, 54);
+    height: 10%;
+}
+
+.logo img{
+    float: left;
+    width: 220px;
+    margin-left: 50px;
+    margin-top: 27px;
+}
+ 
+.ssmv img{
+    float: left;
+    width: 210px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+ 
+ a:link{
+    color:white;
+    text-decoration: none;
+}
+
+ a:visited{
+    color:white;
+    text-decoration: none;
+}
+
+ a:hover{
+    color:lightblue;
+    text-decoration: none;
+}
+
+.active a{
+    color:lightblue !important;
+    text-decoration: none;
+}
+
+ nav ul{
+     float: right;
+     display: inline-flex;
+     text-align: right;
+     margin: 35px 10px;
+     
+ }
+
+ nav ul li{
+    float: right;
+    font-size: 20px;
+    list-style: none;
+    margin: 0 50px;
+    cursor: pointer;
+
+}
+
+
+hr { 
+    width:200%; 
+    height:1px; 
+    background: #fff 
+}
+
+
+.banner{
+    widows: 80%;
+    height: 70%;
+    top: 25%;
+    left: 100px;
+    position: absolute;
+    color: #fff;
+}
+
+.app-text{
+    width: 70%;
+    float: left;
+}
+
+.app-text h1{
+    font-size: 43px;
+    width: 640px;
+    position: relative;
+    margin-left: 40px;
+
+}
+
+.app-text p{
+    width: 800px;
+    font-size: 20px;
+    margin: 30px 0 30px 40px;
+    line-height: 25px;
+    color: rgb(197, 197, 197)
+}
+
+.app-text h3{
+    width: 800px;
+    margin-left: 40px;
+    font-size: 20
+}
+
+.app-picture{
+    width: 50%;
+    float: right;
+}
+
+.app-picture img{
+    width: 100%;
+    margin-top: -20px;
+    padding-left: 50px;
+}

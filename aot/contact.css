@@ -1,0 +1,111 @@
+ *{
+     margin: 0;
+     padding: 0;
+     font-family: sans-serif;
+     text-decoration: none;
+     list-style-type: none;
+ }
+
+body {
+    background: rgb(105, 101, 101);
+}
+
+.container{
+     width: 100%;
+     margin: 0 auto;
+ }
+
+header{
+    background: rgb(56, 54, 54);
+    height: 10%;
+}
+
+.logo img{
+    float: left;
+    width: 220px;
+    margin-left: 50px;
+    margin-top: 27px;
+}
+ 
+.ssmv img{
+    float: left;
+    width: 210px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+ 
+
+ 
+nav a:link{
+    color:white;
+}
+
+nav a:visited{
+    color:white;
+}
+
+nav a:hover{
+    color:lightblue;
+}
+
+.active a{
+    color:lightblue !important;
+}
+
+ nav ul{
+     float: right;
+     display: inline-flex;
+     text-align: right;
+     margin: 35px 10px;
+     
+ }
+
+ nav ul li{
+    float: right;
+    font-size: 20px;
+    list-style: none;
+    margin: 0 50px;
+    cursor: pointer;
+
+}
+
+
+input[type=text], select, textarea {
+    width: 70%; /* Full width */
+    padding: 15px; /* Some padding */ 
+    background-color: lightgray;
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 10px; /* Add a top margin */
+    margin-bottom: 20px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: rgb(104, 174, 218);
+    font-size: 20px;
+    color: white;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: lightblue;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .form {
+    border-radius: 5px;
+    padding: 50px;
+    color: white;
+    font-size: 20px;
+  }
+
+.submit{
+    width: 80%;
+}
